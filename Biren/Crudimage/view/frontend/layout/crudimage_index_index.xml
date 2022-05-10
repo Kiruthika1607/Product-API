@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Biren\Crudimage\Block\Crudimage" name="crudimage.list" template="crudimage.phtml">
+            </block>
+        </referenceContainer>
+<!--        <referenceBlock name="footer_links">-->
+<!--            <block class="Magento\Framework\View\Element\Html\Link\Current" name="crudimage-link">-->
+<!--                <arguments>-->
+<!--                    <argument name="label" xsi:type="string" translate="true">Crud</argument>-->
+<!--                    <argument name="path" xsi:type="string">crudimage/index/index</argument>-->
+<!--                </arguments>-->
+<!--            </block>-->
+<!--        </referenceBlock>-->
+    </body>
+</page>

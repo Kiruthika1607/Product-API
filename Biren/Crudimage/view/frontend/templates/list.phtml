@@ -1,0 +1,32 @@
+<?php $collection = $block->getCrudimageCollection(); ?>
+
+
+    <table class="data table" border="1" id="crudimage-data-table">
+        <caption class="table-caption"> Crud Data</caption>
+        <thead>
+            <tr>
+                <th scope="col" class="col title">Id</th>
+                <th scope="col" class="col title">Title</th>
+                <th scope="col" class="col author">Status</th>
+
+                <th scope="col" class="col actions">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($collection as $key => $data): ?>
+                <tr>
+                    <td data-th="Title" class="col title"><?php echo $data->getId(); ?></td>
+                    <td data-th="Author" class="col author"><?php echo $data->getTitle(); ?></td>
+                    <td data-th="Author" class="col author"><?php echo $data->getAuthor(); ?></td>
+
+                    <td data-th="Actions" class="col actions">
+                        <?php $id = ($data->getCrudimageId()) ? $data->getCrudimageId() : $data['crudimage_id']; ?>
+                        <!-- "$data->getTesting13Id()" was not working when I generated Vky_Testing13 module. That's why I had to place above line. -->
+                        <a href="<?php echo $block->getBaseUrl().'crudimage/index/view/id/'.$id; ?>" class="action view">
+                            <span>View</span>
+                        </a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
